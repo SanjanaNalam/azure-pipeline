@@ -1,0 +1,19 @@
+{
+	"name": "Binary2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "sanaanalytics-WorkspaceDefaultStorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "SalesLT",
+				"fileSystem": "gold1"
+			}
+		}
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}

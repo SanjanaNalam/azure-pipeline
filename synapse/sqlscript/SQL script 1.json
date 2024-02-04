@@ -1,0 +1,17 @@
+{
+	"name": "SQL script 1",
+	"properties": {
+		"content": {
+			"query": "\nSELECT\n     *\nFROM\n    OPENROWSET(\n        BULK 'https://trendytecvhdatalake.dfs.core.windows.net/gold1/SalesLT/Address/',\n        FORMAT = 'DELTA'\n    ) AS [result]\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "master",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

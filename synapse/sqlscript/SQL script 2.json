@@ -1,0 +1,17 @@
+{
+	"name": "SQL script 2",
+	"properties": {
+		"content": {
+			"query": "\n-- This is auto-generated code\n\ncreate view addresstables\nas\n\nSELECT\n     *\nFROM\n    OPENROWSET(\n        BULK 'https://trendytecvhdatalake.dfs.core.windows.net/gold1/SalesLT/Address/',\n        FORMAT = 'DELTA'\n    ) AS [result]\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "gold_db",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

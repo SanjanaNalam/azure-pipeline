@@ -1,0 +1,17 @@
+{
+	"name": "SQLstoredprocedure",
+	"properties": {
+		"content": {
+			"query": "Use gold_db\nGO\ncreate or alter proc CreateSQLServerless_gold @ViewName NVARCHAR(100)\nAS\nBEGIN\n\nDECLARE @statement VARCHAR(MAX)\n\n    SET @statement = N'Create OR ALTER VIEW '+ @ViewName + ' AS\n        SELECT\n            *\n            FROM\n                OPENROWSET(\n                BULK ''https://trendytecvhdatalake.dfs.core.windows.net/gold1/SalesLT/' + @ViewName + '/'' ,\n                FORMAT = ''DELTA''\n            ) AS [result]\n        '\n\nEXEC (@statement)\n\nEND\nGO\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "gold_db",
+				"poolName": "Built-in"
+			},
+			"resultLimit": -1
+		},
+		"type": "SqlQuery"
+	}
+}
