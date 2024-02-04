@@ -1,0 +1,9 @@
+{
+	"name": "datafactorytrndytech",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "73edb02b-3b95-4595-8ca3-56ea139edacf",
+		"tenantId": "1d6889cb-f898-477b-91b2-9d4bff9c77e0"
+	}
+}

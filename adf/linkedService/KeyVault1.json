@@ -1,0 +1,11 @@
+{
+	"name": "KeyVault1",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://azuretrendykey.vault.azure.net/"
+		}
+	}
+}
